@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+
+function RutInput() {
+  const [rut, setRut] = useState("");
+  const [isValid, setIsValid] = useState(null);
+
+  const handleInputChange = (event) => {
+    setRut(event.target.value);
+  };
+
+  const handleBlur = async () => {
+    const response = await fetch(`https://your-api-url.com/validate-rut?rut=${rut}`);
+    const data = await response.json();
+    setIsValid(data.isValid);
+  };
+
+  return (
+    <div>
+      <label htmlFor="rut">RUT:</label>
+      <input
+        type="text"
+        id="rut"
+        name="rut"
+        value={rut}
+        onChange={handleInputChange}
+        onBlur={handleBlur}
+      />
+      {isValid === false && <p style={{ color: "red" }}>Invalid RUT</p>}
+    </div>
+  );
+}
+
+export default RutInput;
