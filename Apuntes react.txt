@@ -1,0 +1,31 @@
+libreria para poder crear proyectos
+npm install -g create-react-app
+
+Comando crear proyecto
+create-react-app (nombre-carpeta)
+
+cd (ruta carpeta)
+npm start
+
+Crear carpetas
+assets>
+	css
+	images
+components
+	crear archivo react FormularioRuts.jsx
+		crear contenido con 'rafce'+tab
+		(Extension de VisualStudio: ES7+ React/Redux/React-Native snippets)
+service
+	crear archivo api js	
+
+
+instalar libreria para formularios
+npm install react-hook-form
+
+instalar formato bootstrap
+npm install bootstrap
+
+Crear un Form.css para estilos del formulario
+
+instalar libreria de rutas: 
+npm install react-router-dom axios
